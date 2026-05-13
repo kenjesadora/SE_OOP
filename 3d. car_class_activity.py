@@ -9,19 +9,25 @@ class Car:
         self.model = model
         self.year = year
         self.price = price
+        self.for_sale = False
 
     def __str__(self):
-
-
+        if self.for_sale == True:
+            return '|Make: '+self.make+' | Model: '+self.model +'| FOR SALE |'
+        else:
+            return '|Make: '+self.make+' | Model: '+self.model +'| NOT FOR SALE |'
+        
+    
 c1 = Car('Mazda','6',2005)
-
-
-cars = [c1]
+c2 = Car('Honda','7',2006)
+c2.for_sale = True
+c3 = Car('Ferrari','Laferarri',2021)
+c4 = Car('Toyota','Camry',2025)
+ 
+cars = [c1,c2,c3,c4]
 
 for car in cars:
     print(car)
-
-
 #ACTIVITIES:
 #1. Istantiate another car object
 #2. Add another attribute (for_sale)

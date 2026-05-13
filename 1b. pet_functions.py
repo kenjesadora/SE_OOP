@@ -1,7 +1,7 @@
 name = 'Bonnie'
 animal_category = 'Cat'
 age = 3
-vaccinated = True
+vaccinated = False
 ccard = '3423 2326 7543 1234'
 billing_address = '17 Park Drive, The Shire 2695'
 owner_name = 'Alex Ngyuen'
@@ -37,10 +37,23 @@ if verify_credit_card(num) == True:
 else:
   print('INVALID')
 #2. Ask the user for a credit card number and let them know if it is valid
+
+#3. If the credit card is valid then reduce balance by $39
 num = input('Enter a credit card number:') 
 if verify_credit_card(num) == True:
   print('VALID')
+  account_balance -= 39
 else:
   print('INVALID') 
-#3. If the credit card is valid then reduce balance by $39
+
+print(account_balance)
 #4. Write and test a function to vaccinate Bonnie 
+print(vaccinated)
+def vaccinated():
+  global vaccinated 
+  vaccinated = True
+  
+
+vaccinated()
+print(vaccinated)
+       
